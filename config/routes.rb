@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :microbloggings
+
   resources :microposts
 
   resources :users

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @microblogging.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @microblogging.email %>
+</p>
+
+<p>
+  <strong>Contents:</strong>
+  <%= @microblogging.contents %>
+</p>
+
+<%= link_to 'Edit', edit_microblogging_path(@microblogging) %> |
+<%= link_to 'Back', microbloggings_path %>

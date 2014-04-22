@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140421211610) do
+ActiveRecord::Schema.define(version: 20140421213859) do
+
+  create_table "microbloggings", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "contents"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "microposts", force: true do |t|
     t.string   "content"

@@ -1,0 +1,29 @@
+<h1>Listing microbloggings</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Contents</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @microbloggings.each do |microblogging| %>
+      <tr>
+        <td><%= microblogging.name %></td>
+        <td><%= microblogging.email %></td>
+        <td><%= microblogging.contents %></td>
+        <td><%= link_to 'Show', microblogging %></td>
+        <td><%= link_to 'Edit', edit_microblogging_path(microblogging) %></td>
+        <td><%= link_to 'Destroy', microblogging, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Microblogging', new_microblogging_path %>
